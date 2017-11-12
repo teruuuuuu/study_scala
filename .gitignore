@@ -1,0 +1,6 @@
+/project/*
+/.idea/*
+/target/*
+/src/main/resources/target/
+/src/main/resources/production/
+/src/main/resources/staging/
