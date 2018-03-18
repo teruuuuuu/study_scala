@@ -14,8 +14,8 @@ object TryCollectionFramework {
     }.toSeq.sortBy(_._2).reverse
   }
 
-  def expand[String, V](m: Map[String, List[V]]): List[Map[String, V]] =
-    m.foldLeft(List(Map.empty[String, V])){
+  def expand[k, V](m: Map[k, List[V]]): List[Map[k, V]] =
+    m.foldLeft(List(Map.empty[k, V])){
       case (acc, (k, l)) => l.flatMap(v => acc.map(_ + ((k, v))))
     }
 
@@ -25,5 +25,12 @@ object TryCollectionFramework {
       // 同一期間内でのbean内の各項目展開後、beanごとの組み合わせで展開する
       JsonSameTermConfig(spanConfig.a, expand(spanConfig.b.mapValues(expand)))
     }
+  }
+
+  def main(args: Array[String]) = {
+
+    val a:Map[Int, List[String]] = Map(1 -> List("a", "b", "c"), 2 -> List("d", "e"))
+    val b = expand(a)
+    print(b)
   }
 }

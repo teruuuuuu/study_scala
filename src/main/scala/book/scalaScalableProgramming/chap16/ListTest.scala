@@ -7,7 +7,7 @@ class ListTest {
 
 }
 
-object listTest{
+object ListTest{
   def main(args: Array[String]): Unit ={
 
 //    val a = List(3, 5, 2, 16, 7 , 9)

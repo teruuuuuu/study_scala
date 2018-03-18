@@ -21,6 +21,7 @@ libraryDependencies ++= Seq(
   "org.scalikejdbc" %% "scalikejdbc-interpolation" % "2.5.0",
   "org.scalikejdbc" %% "scalikejdbc-config"        % "2.5.0",
   "org.json4s" % "json4s-jackson_2.10" % "3.1.0",
+  "org.jsoup" % "jsoup" % "1.7.2",
   "ch.qos.logback"  %  "logback-classic"    % "1.1.+",
   "org.postgresql" % "postgresql" % "9.4-1201-jdbc4"
 )
