@@ -4,3 +4,8 @@
 /src/main/resources/target/
 /src/main/resources/production/
 /src/main/resources/staging/
+
+
+/core/target/*
+/sub/target/*
+/util/target/*
